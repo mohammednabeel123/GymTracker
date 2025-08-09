@@ -9,42 +9,97 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navbar (normal) -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand fw-bold text-warning" href="#">GymTracker</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Programs</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Trainers</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2 bg-dark text-white border-warning" type="search" placeholder="Search">
-          <button class="btn btn-warning fw-bold" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-  
-  <!-- Section with Video Background -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold text-warning d-flex align-items-center" href="#">
+            FitPulse
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Programs</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Trainers</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2 bg-dark text-white border-warning" type="search" placeholder="Search" />
+              <button class="btn btn-warning fw-bold" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
   <section class="section1 position-relative">
     <video autoplay muted loop playsinline class="w-100 h-100 position-absolute top-0 start-0" style="object-fit: cover; z-index: -1;">
       <source src="/videos/a Cinematic Fitness Video...SONY FX6.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    
-    <div class="d-flex flex-column justify-content-center align-items-center text-white h-100">
-      <h1 class="fw-bold display-3">Welcome to GymWolf</h1>
-      <p class="lead">Push your limits. Transform your life.</p>
-      <a href="#" class="btn btn-warning btn-lg fw-bold">Join Now</a>
+    <div class="d-flex flex-column justify-content-center align-items-center text-white h-100 text-center">
+        <h1 class="fw-bold display-3 welcome">Welcome to FitPulse</h1>
+        <p class="fw-bold display-3">A better way to track your workouts</p>
+        <blockquote class="motivation fst-italic fs-4 text-warning text-center"></blockquote>
+        <a href="#" class="btn btn-warning btn-lg fw-bold">Join Now</a>
     </div>
   </section>
-  <section></section>
+  <section class="trainer-section py-5 bg-light text-dark">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left: Text Content -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h2 class="fw-bold mb-3">Online Personal Trainer</h2>
+          <p class="fs-5">
+            Gymwolf has certified personal trainers that provide you with customised workout plans depending on your goals.
+            Our trainers track your progress, coach and motivate you daily through our web and smartphone app.
+          </p>
+          <a href="#" class="btn btn-warning btn-lg fw-bold mt-3">Learn more</a>
+        </div>
+        <!-- Right: Image or illustration -->
+        <div class="col-md-6 text-center">
+            <img src="images/image1.jpg" alt="Online Trainer" class="img-fluid rounded shadow d-none d-sm-block">
+          </div>          
+      </div>
+    </div>
+  </section>
+  <section class="features-section py-5 bg-white text-dark">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col text-center">
+          <h2 class="fw-bold text-warning">Features</h2>
+          <p class="fs-5 text-muted">
+            Gymwolf is a workout tracking tool. Add workouts, create your own customized workout plans, or find a suitable plan from other users.
+            Accomplish your goals with motivation from personal trainers and committed training.
+          </p>
+        </div>
+      </div>
+  
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <div class="p-4 border rounded h-100 shadow-sm">
+            <h5 class="fw-bold mb-2">Workout Tracker</h5>
+            <p>Track your workouts and progress with ease. Log sets, reps, and monitor performance over time.</p>
+          </div>
+        </div>
+  
+        <div class="col-md-4 mb-4">
+          <div class="p-4 border rounded h-100 shadow-sm">
+            <h5 class="fw-bold mb-2">Custom Plans</h5>
+            <p>Create your own workout routines or pick from hundreds of community-shared plans tailored to all levels.</p>
+          </div>
+        </div>
+  
+        <div class="col-md-4 mb-4">
+          <div class="p-4 border rounded h-100 shadow-sm">
+            <h5 class="fw-bold mb-2">Personal Trainers</h5>
+            <p>Stay motivated and get expert guidance from certified trainers available via app or web.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>

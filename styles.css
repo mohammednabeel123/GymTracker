@@ -1,3 +1,79 @@
-.section1{
+/* Full-height section with overlay text */
+.section1 {
     height: 100vh;
-}
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Center the content in the section */
+  .section1 .d-flex {
+    min-height: 100vh;
+    padding: 2rem;
+    z-index: 1;
+  }
+  
+  /* Video background styling */
+  .section1 video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Sliding animation for the welcome heading */
+  .welcome {
+    opacity: 0;
+    animation: slideInOut 4s ease-in-out forwards;
+  }
+  
+  @keyframes slideInOut {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    20% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    80% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+  }
+  
+  /* Additional text and spacing */
+  .section1 h1,
+  .section1 p,
+  .section1 blockquote {
+    margin-bottom: 1rem;
+  }
+  
+  .section1 p {
+    font-size: 1.75rem;
+  }
+  
+  .section1 .btn {
+    margin-top: 1.5rem;
+    padding: 0.75rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .section1 h1 {
+      font-size: 2.5rem;
+    }
+  
+    .section1 p {
+      font-size: 1.25rem;
+    }
+  
+    .section1 blockquote {
+      font-size: 1rem;
+    }
+  }
+  
