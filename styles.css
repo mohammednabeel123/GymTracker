@@ -1,4 +1,4 @@
-/* Full-height section with overlay text */
+
 .section1 {
     height: 100vh;
     position: relative;
@@ -103,3 +103,81 @@
     transition: 0.3s ease-in-out;
 
    }
+/* Container to center content and limit width */
+#exercise-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  padding: 0 1rem;
+}
+
+/* Category box */
+.category {
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  background: #0d0d0e;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  border-left: 6px solid #007bff;
+  transition: border-color 0.3s ease;
+}
+
+.category:hover {
+  border-color: #0056b3;
+}
+
+/* Category title */
+.category h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color:rgba(223, 190, 3, 0.932);
+  font-weight: 700;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 0.3rem;
+}
+
+/* Each exercise card */
+.exercise {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
+}
+
+.exercise:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Exercise name styling */
+.exercise-name {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  color: #333;
+}
+
+/* Exercise description styling */
+.exercise-description {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .category {
+    padding: 1rem;
+  }
+  .category h2 {
+    font-size: 1.5rem;
+  }
+  .exercise {
+    padding: 0.8rem 1rem;
+  }
+}
+
