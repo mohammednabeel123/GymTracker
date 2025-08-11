@@ -25,4 +25,47 @@ const gymQuotes = [
   const motivation= document.querySelector(".motivation");
   motivation.textContent = gymQuotes[randomGym];
 
-
+  const exercises = [
+    {
+      name: "Chest",
+      image: "images/Chest.jpg"
+    },
+    {
+      name: "Biceps",
+      image: "images/Biceps.jpg"
+    },
+    {
+      name: "Triceps",
+      image: "images/Triceps.avif"
+    },
+    {
+      name: "Back",
+      image: "images/back.jpg"
+    },
+    {
+      name: "Shoulder",
+      image: "images/shoulder.jpg"
+    },
+    {
+      name: "Legs",
+      image: "images/legs.avif"
+    },
+    {
+      name: "Abdominal",
+      image: "images/Abdominall.jpg"
+    },
+    {
+      name: "Combined",
+      image: "images/combined.jpg"
+    },
+    {
+      name: "Cardio",
+      image: "images/cardio.jpg"
+    },
+    {
+      name: "Ab",
+      image: "images/ab.jpg"
+    }
+  ];
+  
+  const list_display = document.getElementById("list-display");

@@ -76,4 +76,30 @@
       font-size: 1rem;
     }
   }
+  #exercise-header {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .overlay {
+    position: absolute;
+    top: 50%; /* vertical center */
+    left: 50%; /* horizontal center */
+    transform: translate(-50%, -50%); /* adjust for true center */
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7); /* for readability */
+  }
+
+  .card-img-top {
+    height: 200px;   /* same height for all */
+    width: 100%;     /* take full card width */
+    object-fit: cover; /* crop instead of stretching */
+  }
   
+  .card-text:hover{
+    background-color: rgb(201, 197, 197);
+    transition: 0.3s ease-in-out;
+
+   }
