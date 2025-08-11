@@ -314,7 +314,6 @@ const exercises = [
     {
       category: "Biceps",
       exercises: [
-        { name: "21", description: "No description available." },
         { 
           name: "Alternate Bicep Curl", 
           description: "This exercise is a single arm version of a biceps curl." 
@@ -464,8 +463,10 @@ const exercises = [
         { 
           name: "One Arm Bicep Concentration on Stability Ball", 
           description: "This exercise uses a Stability Ball instead of a bench for better form." 
-        },
-          {
+        }
+      ]
+    },
+        {
             category: "Chest",
             exercises: [
               {
@@ -970,22 +971,6 @@ const exercises = [
               {
                 name: "Shoulder Press Machine",
                 description: "Machine version of shoulder press."
-              },
-              {
-                name: "Smith Shoulder Press",
-                description: "No description available."
-              },
-              {
-                name: "Standing Barbell Shoulder Press",
-                description: "No description available."
-              },
-              {
-                name: "Two Arm Front Cable Raises",
-                description: "No description available."
-              },
-              {
-                name: "Wall Climbs",
-                description: "No description available."
               }
             ]
           },
@@ -1125,42 +1110,6 @@ const exercises = [
                 description: "Overhead triceps extension while seated."
               },
               {
-                name: "Seated Triceps Press",
-                description: "No description available."
-              },
-              {
-                name: "Single Arm Pronated Triceps Extension",
-                description: "No description available."
-              },
-              {
-                name: "Single Arm Supinated Triceps Extension",
-                description: "No description available."
-              },
-              {
-                name: "Standing One Arm Low-Pulley Triceps Extension",
-                description: "No description available."
-              },
-              {
-                name: "Standing One Arm Triceps Extension",
-                description: "No description available."
-              },
-              {
-                name: "Standing Overhead Triceps Extension",
-                description: "No description available."
-              },
-              {
-                name: "Standing Towel Triceps Extension",
-                description: "No description available."
-              },
-              {
-                name: "Standing Triceps Extension",
-                description: "No description available."
-              },
-              {
-                name: "Tate Press",
-                description: "No description available."
-              },
-              {
                 name: "Tricep Dip Machine",
                 description: "Machine exercise for triceps dips."
               },
@@ -1190,34 +1139,36 @@ const exercises = [
               }
             ]
           }
-      ]
-    }
-  ]
-
-  const container = document.getElementById('exercise-container');
-  exerciseCategories.forEach((items,index) => {
-    const catDiv = document.createElement('div')
-    catDiv.classList.add('category')
-
-    const catTitle = document.createElement('h2');
+        ]   
+    
+    const container = document.getElementById('exercise-container')
+    
+    exerciseCategories.forEach((items, index) => {
+      console.log(`Rendering category: ${items.category}`);
+      
+      const catDiv = document.createElement('div');
+      catDiv.classList.add('category');
+  
+      const catTitle = document.createElement('h2');
       catTitle.textContent = items.category;
       catDiv.appendChild(catTitle);
-
+  
       items.exercises.forEach(exercise => {
-        const exDiv = document.createElement('div')
-        exDiv.classList.add('exercise')
-        
+        const exDiv = document.createElement('div');
+        exDiv.classList.add('exercise');
+  
         const exName = document.createElement('div');
         exName.classList.add('exercise-name');
-        exName.textContent = exercise.name
-
+        exName.textContent = exercise.name;
+  
         const exDesc = document.createElement('div');
         exDesc.classList.add('exercise-description');
         exDesc.textContent = exercise.description;
-
+  
         exDiv.appendChild(exName);
         exDiv.appendChild(exDesc);
         catDiv.appendChild(exDiv);
       });
+  
       container.appendChild(catDiv);
-  });
+    });
