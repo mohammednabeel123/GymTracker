@@ -160,6 +160,12 @@
   margin-bottom: 0.4rem;
   color: #333;
 }
+.exercise-name:hover {
+  color: #ff6f61;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 
 /* Exercise description styling */
 .exercise-description {
